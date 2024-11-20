@@ -1,63 +1,69 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# CodeBorges Blog
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+Este é um blog pessoal desenvolvido com Next.js, TypeScript e TailwindCSS para compartilhar conteúdo sobre tecnologia, programação e desenvolvimento.
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates) feature using Markdown files as the data source.
+## 🚀 Funcionalidades
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+- Layout responsivo e moderno
+- Posts formatados em Markdown
+- Suporte a imagens de capa
+- Formatação de datas em português
+- Informações do autor
+- Preview dos posts na página inicial
+- SEO otimizado
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+## 💻 Tecnologias
 
-## Demo
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [date-fns](https://date-fns.org/)
 
-[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
+## 📝 Estrutura
 
-## Deploy your own
+O projeto possui a seguinte estrutura de componentes principais:
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog-starter)
+- `layout.tsx` - Layout base com header e footer
+- `post-preview.tsx` - Card de preview dos posts
+- `date-formatter.tsx` - Formatação de datas em pt-BR
+- `more-stories.tsx` - Grid de posts
+- `container.tsx` - Container responsivo
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter&project-name=blog-starter&repository-name=blog-starter)
+## 🎯 Objetivo
 
-### Related examples
+O objetivo deste blog é compartilhar conhecimento e experiências sobre:
 
-- [WordPress](/examples/cms-wordpress)
-- [DatoCMS](/examples/cms-datocms)
-- [Sanity](/examples/cms-sanity)
-- [TakeShape](/examples/cms-takeshape)
-- [Prismic](/examples/cms-prismic)
-- [Contentful](/examples/cms-contentful)
-- [Strapi](/examples/cms-strapi)
-- [Agility CMS](/examples/cms-agilitycms)
-- [Cosmic](/examples/cms-cosmic)
-- [ButterCMS](/examples/cms-buttercms)
-- [Storyblok](/examples/cms-storyblok)
-- [GraphCMS](/examples/cms-graphcms)
-- [Kontent](/examples/cms-kontent)
-- [Umbraco Heartcore](/examples/cms-umbraco-heartcore)
-- [Builder.io](/examples/cms-builder-io)
-- [TinaCMS](/examples/cms-tina/)
-- [Enterspeed](/examples/cms-enterspeed)
+- Desenvolvimento Web
+- Desenvolvimento Mobile 
+- Desenvolvimento Desktop
+- Inteligência Artificial
+- Backend
+- E outras tecnologias!
 
-## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Como Rodar o Projeto
 
-```bash
-npx create-next-app --example blog-starter blog-starter-app
-```
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/GabrielBorges2000/signerpro.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd signerpro
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+5. Abra o navegador e acesse:
+   ```
+   http://localhost:3000
+   ```
 
-```bash
-yarn create next-app --example blog-starter blog-starter-app
-```
+## Contribuição
 
-```bash
-pnpm create next-app --example blog-starter blog-starter-app
-```
-
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-# Notes
-
-`blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+Sinta-se à vontade para contribuir com melhorias! Abra uma issue ou envie um pull request.

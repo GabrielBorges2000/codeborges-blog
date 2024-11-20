@@ -1,30 +1,24 @@
-import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
-import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
+import Container from "@/components/container";
+import { MoreStories } from "@/components/more-stories";
 import { getAllPosts } from "@/lib/api";
+import Image from "next/image";
 
 export default function Index() {
-  const allPosts = getAllPosts();
+	const allPosts = getAllPosts();
 
-  const heroPost = allPosts[0];
-
-  const morePosts = allPosts.slice(1);
-
-  return (
-    <main>
-      <Container>
-        <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </main>
-  );
+	return (
+		<main>
+			<Container>
+				<Image
+					src="/assets/banner.png"
+					alt="Banner codeborges"
+					className="shadow-sm w-full md:h-[60vh] object-cover rounded-lg mb-24"
+					width={1300}
+					height={400}
+					quality={100}
+				/>
+				{allPosts.length > 0 && <MoreStories posts={allPosts} />}
+			</Container>
+		</main>
+	);
 }
