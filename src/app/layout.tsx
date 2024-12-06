@@ -34,7 +34,7 @@ export default function RootLayout({
 				<Header />
 				<div className="min-h-screen">{children}</div>
 				<Footer />
-				<GoogleAdsense publicId={process.env.NEXT_PUBLIC_ADSENSE_KEY}/>
+				<GoogleAdsense publicId={process.env.NEXT_PUBLIC_ADSENSE_KEY as string}/>
 			</body>
 		</html>
 	);
