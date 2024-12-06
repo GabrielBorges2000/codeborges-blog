@@ -7,8 +7,7 @@ import Script from 'next/script';
 
 import "./globals.css";
 import Header from "@/components/header";
-import { GoogleAdsense } from "@/components/google-adsense";
-import Head from "next/head";
+import GoogleAdsense from "@/components/google-adsense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,15 +31,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt-BR">
-			 <Head>
-        <meta name="google-adsense-account" content={`ca-pub-${process.env.NEXT_PUBLIC_ADSENSE_KEY}`} />
-      </Head>
 			<body className={cn(inter.className)}>
 				<Header />
 				<div className="min-h-screen">{children}</div>
 				<Footer />
-				<GoogleAdsense />
 			</body>
+				<GoogleAdsense pId={process.env.NEXT_PUBLIC_ADSENSE_KEY as string} />
 		</html>
 	);
 }
