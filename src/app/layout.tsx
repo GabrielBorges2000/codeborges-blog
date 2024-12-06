@@ -7,6 +7,7 @@ import Script from 'next/script';
 
 import "./globals.css";
 import Header from "@/components/header";
+import { GoogleAdsense } from "@/components/google-adsese";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +34,7 @@ export default function RootLayout({
 				<Header />
 				<div className="min-h-screen">{children}</div>
 				<Footer />
-				 <Script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3323636009394692" crossOrigin="anonymous" />
+				<GoogleAdsense publicId={process.env.NEXT_PUBLIC_ADSENSE_KEY}/>
 			</body>
 		</html>
 	);
