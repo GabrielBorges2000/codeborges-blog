@@ -56,6 +56,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 			title,
 			images: [post.ogImage.url],
 		},
+		robots: 'index, follow',
 	};
 }
 
